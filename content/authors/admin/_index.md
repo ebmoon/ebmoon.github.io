@@ -1,13 +1,10 @@
 ---
 # Display name
-title: 吳健雄
-
-# Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+title: Kanghee Park
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Kanghee
+last_name: Park
 
 # Status emoji
 status:
@@ -20,36 +17,28 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Ph.D. Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: UC San Diego
+    url: https://cse.ucsd.edu/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: 'mailto:kap022@ucsd.edu'
     label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/ebmoon
   - icon: brands/linkedin
-    url: https://www.linkedin.com/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/
-  - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://www.linkedin.com/in/kanghee-park-5a5b1411b/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Program Synthesis
+  - Constrained Decoding
+  - Formal Verification
 
 education:
   - area: PhD Artificial Intelligence
@@ -183,4 +172,8 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a 4th year CS PhD student at the UC San Diego, where I am advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/). 
+My research is focused on program synthesis techniques and their applications.
+I am also interested in the areas of program analysis, verification and security.
+
+Outside of work, I enjoy playing acoustic guitar.
