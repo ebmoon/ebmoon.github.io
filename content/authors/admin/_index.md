@@ -41,37 +41,27 @@ interests:
   - Formal Verification
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: PhD Computer Science
+    institution: UC San Diego
+    date_start: 2024-09-15
+    date_end: 
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+      Research on specification synthesis and grammar-constrained decoding.
+      Supervised by [Prof Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
+  - area: MS Computer Science
+    institution: UW Madison
+    date_start: 2021-08-20
+    date_end: 2024-05-31
     summary: |
-      GPA: 3.8/4.0
+      Supervised by [Prof Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
+      Transferred to UC San Diego after 3 years. 
+  - area: BE Computer Science and Engineering
+    institution: POSTECH
+    date_start: 2015-02-01
+    date_end: 2021-02-01
+    summary: |
+      Engineering's Valedictorian, Summa Cum Laude
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
   - position: Director of Cloud Infrastructure
     company_name: GenCoin
@@ -132,11 +122,8 @@ skills:
 
 languages:
   - name: English
-    percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: Korean
+  - name: Japanese
 
 # Awards.
 #   Add/remove as many awards below as you like.
