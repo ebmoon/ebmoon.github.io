@@ -78,3 +78,11 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
+
+Some existing works constrains possible next tokens to ensure grammaticality of generated output. 
+But what if I want the output to always be one of the following numbers:
+{00000, 10000, 10001, 10010, 10011, 10100, 10101, 10111, 11001, 11010, 11011, 11100, 11101, 11111}
+If the original LLM gives you each of the possible 32 strings of length 5 with equal probability, it must generate the token 0 or 1 with equal probability at the first step. 
+This means that the string 00000 will be generated 1/2 of the times, which is not the desired distribution.
+When doing constrained decoding with a constraint G, we want to sample from the LLM according to its original probability, but conditioned on the output satisfying G (e.g., being in the grammar). 
+We formalize this problem as the "constraint alignment decoding problem" and propose an initial solution for decoding correctly.

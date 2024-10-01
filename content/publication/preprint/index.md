@@ -4,6 +4,9 @@ authors:
 - admin
 - Xuanyu Peng
 - Loris D'Antoni
+author_notes:
+  - 'Equal contribution'
+  - 'Equal contribution'
 date: "2024-08-22T00:00:00Z"
 doi: ""
 
@@ -57,15 +60,13 @@ url_video: ''
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-# projects:
-# - internal-project
+projects: []
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-# slides: example
----
+slides: ""
 
-This work is an extension of my [previous paper](https://dl.acm.org/doi/10.1145/3622861) for a general framework.
+This work is an extension of my [previous paper](https://dl.acm.org/doi/10.1145/3622861) to a general framework.
