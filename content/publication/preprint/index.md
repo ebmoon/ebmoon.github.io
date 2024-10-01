@@ -1,7 +1,9 @@
 ---
-title: "An example preprint / working paper"
+title: "LOUD: Synthesizing Strongest and Weakest Specifications"
 authors:
 - admin
+- Xuanyu Peng
+- Loris D'Antoni
 date: "2019-04-07T00:00:00Z"
 doi: ""
 

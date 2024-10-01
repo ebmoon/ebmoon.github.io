@@ -43,6 +43,7 @@ sections:
   #   design:
   #     columns: '1'
   - block: collection
+    id: papers
     content:
       title: Recent Publications
       text: ""
