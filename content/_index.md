@@ -44,6 +44,10 @@ sections:
           - publication
         featured_only: true
         exclude_featured: false
+      archive:
+        enable: true
+        text: All publications
+        link: /publication/
     design:
       view: citation
 ---
