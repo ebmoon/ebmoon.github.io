@@ -29,7 +29,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: Neural Information Processing Systems 2024
-publication_short: In NeurlIPS 2024
+publication_short: In NeurIPS 2024
 
 abstract: Large Language Models (LLMs) struggle with reliably generating highly structured outputs, such as program code, mathematical formulas, or well-formed markup. Constrained decoding approaches mitigate this problem by greedily restricting what tokens an LLM can output at each step to guarantee that the output matches a given constraint. Specifically, in grammar-constrained decoding (GCD), the LLM's output must follow a given grammar. In this paper we demonstrate that GCD techniques (and in general constrained decoding techniques) can distort the LLM's distribution, leading to outputs that are grammatical but appear with likelihoods that are not proportional to the ones given by the LLM, and so ultimately are low-quality. We call the problem of aligning sampling with a grammar constraint, grammar-aligned decoding (GAD), and propose adaptive sampling with approximate expected futures (ASAp), a decoding algorithm that guarantees the output to be grammatical while provably producing outputs that match the conditional probability of the LLM's distribution conditioned on the given grammar constraint. Our algorithm uses prior sample outputs to soundly overapproximate the future grammaticality of different output prefixes. Our evaluation on code generation and structured NLP tasks shows how ASAp often produces outputs with higher likelihood (according to the LLM's distribution) than existing GCD techniques, while still enforcing the desired grammatical constraints.
 
@@ -49,7 +49,7 @@ featured: true
 #   url: http://example.org
 
 url_pdf: 'https://arxiv.org/abs/2405.21047'
-url_code: ''
+url_code: 'https://github.com/ebmoon/transformers-GAD.git'
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -79,10 +79,12 @@ projects: []
 slides: ""
 ---
 
-Some existing works constrains possible next tokens to ensure grammaticality of generated output. 
-But what if I want the output to always be one of the following numbers:
+Some existing works constrain possible next tokens to ensure grammaticality of generated output. But validity alone is not enough: a decoding algorithm should also preserve the language model's distribution after conditioning on the constraint.
+
+For example, suppose I want the output to always be one of the following numbers:
 {00000, 10000, 10001, 10010, 10011, 10100, 10101, 10111, 11001, 11010, 11011, 11100, 11101, 11111}
-If the original LLM gives you each of the possible 32 strings of length 5 with equal probability, it must generate the token 0 or 1 with equal probability at the first step. 
-This means that the string 00000 will be generated 1/2 of the times, which is not the desired distribution.
-When doing constrained decoding with a constraint G, we want to sample from the LLM according to its original probability, but conditioned on the output satisfying G (e.g., being in the grammar). 
-We formalize this problem as the "constraint alignment decoding problem" and propose an initial solution for decoding correctly.
+If the original LLM gives each possible length-5 binary string equal probability, the desired constrained distribution should be uniform over the valid strings above. A locally constrained decoder, however, may choose 0 or 1 with equal probability at the first step and then force completion after choosing 0, causing 00000 to appear far too often.
+
+Grammar-aligned decoding formalizes this mismatch. Given a constraint G, we want to sample according to the original LLM probability conditioned on satisfying G, not according to a distribution induced by greedy token masking.
+
+The paper proposes ASAp, a decoding algorithm that uses prior samples to approximate the future grammaticality of prefixes. ASAp guarantees grammatical outputs while aligning samples with the model's conditional distribution, and the evaluation studies structured NLP and code-generation tasks.

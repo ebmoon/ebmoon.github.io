@@ -7,20 +7,20 @@ authors:
 author_notes:
   - 'Equal contribution'
   - 'Equal contribution'
-date: "2024-08-22T00:00:00Z"
+date: "2025-10-01T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2024-08-22T00:00:00Z"
+publishDate: "2025-10-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article"]
+publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
-publication_short: ""
+publication: "Object-Oriented Programming, Systems, Languages & Applications 2025"
+publication_short: "OOPSLA 2025"
 
 abstract: "Specifications allow us to formally state and understand what programs are intended to do. To help one extract useful properties from code, Park et al. recently proposed a framework that given (i) a quantifier-free query posed about a set of function definitions, and (ii) a domain-specific language L in which each extracted property is to be expressed (we call properties in the language L-properties), synthesizes a set of L-properties such that each of the property is a strongest L-consequence for the query: the property is an over-approximation of query and there is no other L-property that over-approximates query and is strictly more precise than each property.
 The framework by Park et al. has two key limitations. First, it only supports quantifier-free query formulas and thus cannot synthesize specifications for queries involving nondeterminism, concurrency, etc. Second, it can only compute L-consequences, i.e., over-approximations of the program behavior.
@@ -69,4 +69,10 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 
-This work is an extension of my [previous paper](https://dl.acm.org/doi/10.1145/3622861) to a general framework.
+---
+
+This work extends the specification-synthesis framework from my [previous paper](https://dl.acm.org/doi/10.1145/3622861) to a more general setting. The earlier framework synthesized strongest properties for quantifier-free queries; LOUD handles queries with existential quantifiers and supports both over-approximating and under-approximating specifications.
+
+This matters for programs with nondeterministic or concurrent behavior, where useful specifications can describe what must happen across all executions as well as what can happen along some execution. LOUD captures these two views through strongest L-consequences and weakest L-implicants.
+
+The paper introduces the LOUD framework and the ASPIRE solver. The evaluation uses the framework to describe and localize bugs, extract properties from concurrent programs, and synthesize winning strategies in two-player games.

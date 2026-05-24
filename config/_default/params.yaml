@@ -14,8 +14,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    description: 'Kanghee Park is a PhD candidate in Computer Science and Engineering at UC San Diego working on formal reasoning, program synthesis, program analysis, proof search, and constrained decoding.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -30,7 +30,7 @@ marketing:
 header:
   navbar:
     enable: true
-    blox: "navbar"
+    block: "navbar"
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true
@@ -40,7 +40,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Kanghee Park. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false

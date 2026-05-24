@@ -18,18 +18,14 @@ sections:
       date_format: 'January 2006'
       # Education or Experience section first?
       is_education_first: false
-  - block: resume-skills
+  - block: teaching-experience
     content:
-      title: Skills & Hobbies
-      username: admin
-    design:
-      show_skill_percentage: false
-  - block: resume-awards
-    content:
-      title: Awards
-      username: admin
-  - block: resume-languages
-    content:
-      title: Languages
-      username: admin
+      title: Teaching
+      items:
+        - position: TA for CS513, Numerical Linear Algebra
+          institution: University of Wisconsin-Madison
+          date: Spring 2022
+        - position: TA for CS240, Discrete Mathematics
+          institution: University of Wisconsin-Madison
+          date: Fall 2021
 ---

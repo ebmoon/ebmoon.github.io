@@ -1,0 +1,6 @@
+.hugo_build.lock
+hugo_stats.json
+public/
+resources/
+node_modules/
+assets/jsconfig.json

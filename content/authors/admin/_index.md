@@ -17,7 +17,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D. Student
+role: Ph.D. Candidate, UC San Diego
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -37,40 +37,48 @@ profiles:
 
 interests:
   - Program Synthesis
-  - Constrained Decoding
+  - Program Analysis
   - Formal Verification
+  - Proof Search
 
 education:
-  - area: PhD Computer Science
-    institution: UC San Diego
+  - area: PhD Computer Science and Engineering
+    institution: UC San Diego (Transferred from UW-Madison)
     date_start: 2024-09-15
     date_end: ''
     summary: |
-      Research on specification synthesis and grammar-constrained decoding.
+      Research on scaling formal reasoning through modularization and abstraction.
       Supervised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
   - area: MS Computer Science
-    institution: UW Madison
+    institution: University of Wisconsin-Madison
     date_start: 2021-08-20
     date_end: 2024-05-31
     summary: |
       Supervised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
-      Transferred to UC San Diego after 3 years. 
-  - area: BE Computer Science and Engineering
-    institution: POSTECH
+      Transferred to UC San Diego after 3 years.
+  - area: BS Computer Science and Mathematics
+    institution: Pohang University of Science and Technology
     date_start: 2015-02-01
     date_end: 2021-02-01
     summary: |
       Engineering's Valedictorian, Summa Cum Laude
 
 work:
-  - position: Applied Scienties Intern
+  - position: Research Fellow
+    company_name: Theorem
+    company_url: ''
+    company_logo: ''
+    date_start: 2026-03-01
+    date_end: ''
+    summary: ''
+  - position: Applied Scientist Intern
     company_name: Amazon Web Services
     company_url: ''
     company_logo: ''
     date_start: 2024-06-10
     date_end: 2024-08-30
     summary: Applied Scientist Intern at ARI (Automated Reasoning in Identity) group.
-  - position: Applied Scienties Intern
+  - position: Applied Scientist Intern
     company_name: Amazon Web Services
     company_url: ''
     company_logo: ''
@@ -94,7 +102,7 @@ skills:
     items:
       - name: Acoustic Guitar
         description: ''
-      - name: Climbing
+      - name: Marathon Training
         description: ''
 
 languages:
@@ -121,8 +129,8 @@ languages:
 
 ## About Me
 
-I am a 4th year CS PhD student at the UC San Diego, where I am advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/). 
-My research is focused on program synthesis techniques and their applications.
-I am also interested in the areas of program analysis, verification and security.
+I am a 5th-year PhD candidate in CSE at UC San Diego, advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/), and currently a Research Fellow at [Theorem](https://theorem.dev/).
+My research focuses on scaling formal reasoning through modularization and abstraction, with an emphasis on program analysis, program synthesis, and proof search.
+I have also worked on constrained decoding for Large Language Models as a way to make code generation more reliable.
 
-Outside of work, I enjoy playing acoustic guitar.
+Outside of work, I enjoy playing acoustic guitar and training for marathons.

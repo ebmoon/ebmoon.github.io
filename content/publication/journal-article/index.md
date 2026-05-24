@@ -1,40 +1,39 @@
 ---
-title: "An example journal article"
+title: "Synthesizing Specifications"
 authors:
 - admin
-- Robert Ford
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
-date: "2015-09-01T00:00:00Z"
+- Loris D'Antoni
+- Thomas Reps
+date: "2023-10-01T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2023-10-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article-journal"]
+publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
-publication_short: ""
+publication: "Object-Oriented Programming, Systems, Languages & Applications 2023"
+publication_short: "OOPSLA 2023"
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: "This work studies synthesis of specifications for program behavior."
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: "A framework for synthesizing useful program specifications."
 
 tags:
-- Source Themes
-featured: false
+- Program Synthesis
+- Program Specifications
+featured: true
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_pdf: https://arxiv.org/abs/2301.11117
+url_code: 'https://github.com/ebmoon/oopsla23-artifact'
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -45,8 +44,8 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
-  focal_point: ""
+  caption: ''
+  focal_point: ''
   preview_only: false
 
 # Associated Projects (optional).
@@ -61,15 +60,11 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: ""
 ---
 
-{{% callout note %}}
-Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
+This paper studies how to synthesize useful formal specifications from program code. Instead of requiring a developer to manually write every property, the framework takes a query about a set of function definitions and a domain-specific language for expressing candidate properties.
 
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
+The synthesized results are best properties in the chosen language: each property is as precise as possible within the language, and the set is exhaustive with respect to the query. This makes the approach useful for extracting program facts that are both formal and tailored to the kind of property a user wants to see.
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+The work is implemented in Spyro and demonstrates applications including program-specification mining, abstract-domain operations, and algebraic properties of program modules. It appeared at OOPSLA 2023.
