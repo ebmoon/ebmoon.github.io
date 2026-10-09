@@ -17,12 +17,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D. Candidate, UC San Diego
+role: Research Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: UC San Diego
-    url: https://cse.ucsd.edu/
+  - name: Harmonic
+    url: https://www.harmonic.fun/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -45,7 +45,7 @@ education:
   - area: PhD Computer Science and Engineering
     institution: UC San Diego (Transferred from UW-Madison)
     date_start: 2024-09-15
-    date_end: ''
+    date_end: 2026-09-30
     summary: |
       Research on scaling formal reasoning through modularization and abstraction.
       Supervised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
@@ -64,12 +64,19 @@ education:
       Engineering's Valedictorian, Summa Cum Laude
 
 work:
-  - position: Research Fellow
+  - position: Research Engineer
+    company_name: Harmonic
+    company_url: https://www.harmonic.fun/
+    company_logo: ''
+    date_start: 2026-10-01
+    date_end: ''
+    summary: ''
+  - position: Research Intern
     company_name: Theorem
     company_url: ''
     company_logo: ''
     date_start: 2026-03-01
-    date_end: ''
+    date_end: 2026-09-30
     summary: ''
   - position: Applied Scientist Intern
     company_name: Amazon Web Services
@@ -129,8 +136,7 @@ languages:
 
 ## About Me
 
-I am a 5th-year PhD candidate in CSE at UC San Diego, advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/), and currently a Research Fellow at [Theorem](https://theorem.dev/).
-My research focuses on scaling formal reasoning through modularization and abstraction, with an emphasis on program analysis, program synthesis, and proof search.
-I have also worked on constrained decoding for Large Language Models as a way to make code generation more reliable.
+I am a Research Engineer at [Harmonic](https://www.harmonic.fun/). I completed my PhD in Computer Science and Engineering at UC San Diego in September 2026, advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
+My research focuses on making AI more reliable and effective for formal verification.
 
 Outside of work, I enjoy playing acoustic guitar and training for marathons.
