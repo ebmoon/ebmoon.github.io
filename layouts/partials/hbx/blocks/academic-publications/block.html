@@ -1,0 +1,10 @@
+{{ $archive := site.GetPage "/publication" }}
+{{ $papers := where $archive.RegularPages "Params.featured" true }}
+
+<div class="academic-shell">
+  <div class="academic-section-header">
+    <h2 class="academic-section-title">{{ .wcBlock.content.title }}</h2>
+    <a class="academic-archive-link" href="{{ $archive.RelPermalink }}">{{ .wcBlock.content.archive_label }}</a>
+  </div>
+  {{ partial "academic/publication-list" $papers.ByDate.Reverse }}
+</div>

@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <main class="academic-shell academic-archive">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ partial "academic/publication-list" .RegularPages.ByDate.Reverse }}
+  </main>
+{{ end }}

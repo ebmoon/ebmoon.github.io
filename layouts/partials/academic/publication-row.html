@@ -1,0 +1,73 @@
+{{ $paper := . }}
+{{ $links := slice }}
+{{ range partial "functions/build_links" (dict "page" $paper "is_list" 1) }}
+  {{ if and .url (in .contexts "list") (ne .type "bibtex") }}
+    {{ $url := .url }}
+    {{ if not (urls.Parse $url).Scheme }}
+      {{ with $paper.Resources.GetMatch $url }}
+        {{ $url = .RelPermalink }}
+      {{ else }}
+        {{ $url = $url | relURL }}
+      {{ end }}
+    {{ end }}
+    {{ $links = $links | append (merge . (dict "resolvedUrl" $url)) }}
+  {{ end }}
+{{ end }}
+{{ $primary := "" }}
+{{ range slice "pdf" "preprint" "doi" "canonical" "site" "custom" }}
+  {{ if not $primary }}
+    {{ with where $links "type" . }}
+      {{ $primary = (index . 0).resolvedUrl }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $notes := $paper.Params.author_notes | default slice }}
+{{ $uniqueNotes := uniq (complement (slice "") $notes) }}
+{{ $year := $paper.Date.Format "2006" }}
+<li class="academic-row academic-paper">
+  <div>
+    <h3>
+      {{ if $primary }}<a href="{{ $primary }}">{{ $paper.Title }}</a>{{ else }}{{ $paper.Title }}{{ end }}
+    </h3>
+    {{ with $paper.Params.authors }}
+      <p class="academic-authors">
+        {{- range $index, $name := . -}}
+          {{- if $index }}, {{ end -}}
+          {{- with site.GetPage (printf "/authors/%s" $name) -}}
+            {{- if .Params.highlight_name }}<strong>{{ .LinkTitle }}</strong>{{ else }}{{ .LinkTitle }}{{ end -}}
+          {{- else -}}
+            {{- $name -}}
+          {{- end -}}
+          {{- if lt $index (len $notes) -}}
+            {{- $note := index $notes $index -}}
+            {{- range $marker, $text := $uniqueNotes -}}
+              {{- if eq $note $text }}<sup>{{ add $marker 1 }}</sup>{{ end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      </p>
+    {{ end }}
+    {{ range $marker, $note := $uniqueNotes }}
+      <p class="academic-author-notes"><sup>{{ add $marker 1 }}</sup> {{ $note }}</p>
+    {{ end }}
+    {{ $attachments := where $links "resolvedUrl" "ne" $primary }}
+    {{ with $attachments }}
+      <ul class="academic-paper-links" aria-label="Additional resources">
+        {{ range . }}
+          {{ $label := .label }}
+          {{ if and (not $label) .labelKey }}
+            {{ $label = i18n .labelKey }}
+          {{ end }}
+          <li><a href="{{ .resolvedUrl }}">{{ $label | default (.type | humanize) }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+  <div class="academic-row-meta">
+    {{ with $paper.Params.publication_short | default $paper.Params.publication }}
+      <p>{{ . | replaceRE (printf " %s$" $year) "" | replaceRE "(?i)^in " "" | markdownify }}</p>
+    {{ end }}
+    <time datetime="{{ $year }}">{{ $year }}</time>
+  </div>
+</li>

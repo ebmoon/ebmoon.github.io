@@ -11,6 +11,4 @@ featured: false
 links:
   - name: ProQuest
     url: "https://www.proquest.com/openview/4b91f013d950d53306b370d825791672/1?pq-origsite=gscholar&cbl=18750&diss=y"
-  - name: eScholarship
-    url: "https://escholarship.org/uc/item/3rn6282b"
 ---
