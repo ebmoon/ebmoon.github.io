@@ -17,7 +17,7 @@
             <h3>{{ .area }}</h3>
             <p class="academic-institution">{{ .institution }}</p>
             {{ with .summary }}
-              <div class="academic-education-summary">{{ $page.RenderString . }}</div>
+              <div class="academic-row-summary">{{ $page.RenderString . }}</div>
             {{ end }}
           </div>
           <div class="academic-row-meta">

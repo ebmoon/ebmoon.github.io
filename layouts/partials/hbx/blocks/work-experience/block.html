@@ -1,0 +1,39 @@
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+{{ $person := site.GetPage (printf "/authors/%s" $author) }}
+{{ if not $person }}
+  {{ errorf "Could not find work experience for %s." $author }}
+{{ end }}
+{{ $dateFormat := $block.design.date_format | default "January 2006" }}
+
+{{ with $person.Params.work }}
+  <div class="academic-shell">
+    <h2 class="academic-section-title">Work Experience</h2>
+    <ul class="academic-rows" aria-label="Work experience">
+      {{ range . }}
+        <li class="academic-row">
+          <div>
+            <h3>{{ .position }}</h3>
+            <p class="academic-institution">
+              {{ if .company_url }}<a href="{{ .company_url }}">{{ .company_name }}</a>{{ else }}{{ .company_name }}{{ end }}
+            </p>
+            {{ with .summary }}
+              <div class="academic-row-summary">{{ $page.RenderString . }}</div>
+            {{ end }}
+          </div>
+          <div class="academic-row-meta">
+            {{ with .date_start }}
+              <time datetime="{{ time.Format "2006-01" . }}">{{ time.Format $dateFormat . }}</time> –
+            {{ end }}
+            {{ with .date_end }}
+              <time datetime="{{ time.Format "2006-01" . }}">{{ time.Format $dateFormat . }}</time>
+            {{ else }}
+              {{ i18n "present" | default "Present" }}
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

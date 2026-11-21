@@ -85,13 +85,13 @@ body:has(.academic-hero, .academic-archive) {
 }
 
 .academic-bio a,
-.academic-education-summary a {
+.academic-row-summary a {
   text-decoration: underline;
   text-decoration-color: var(--academic-muted);
 }
 
 .academic-bio a:hover,
-.academic-education-summary a:hover {
+.academic-row-summary a:hover {
   text-decoration-color: currentColor;
 }
 
@@ -218,7 +218,7 @@ body:has(.academic-hero, .academic-archive) {
 .academic-authors,
 .academic-author-notes,
 .academic-institution,
-.academic-education-summary {
+.academic-row-summary {
   color: var(--academic-muted);
   font-size: .9375rem;
   line-height: 1.55;
@@ -226,7 +226,7 @@ body:has(.academic-hero, .academic-archive) {
 
 .academic-authors,
 .academic-institution,
-.academic-education-summary {
+.academic-row-summary {
   margin-top: .3rem;
 }
 

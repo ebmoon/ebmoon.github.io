@@ -64,41 +64,49 @@ education:
       Engineering's Valedictorian, Summa Cum Laude
 
 work:
-  - position: Research Engineer
+  - position: Research Engineer, Formal Method
     company_name: Harmonic
     company_url: https://www.harmonic.fun/
     company_logo: ''
     date_start: 2026-10-01
     date_end: ''
-    summary: ''
+    summary: Using and improving [Aristotle](https://www.harmonic.fun/aristotle/) for large-scale hardware verification in Lean.
   - position: Research Intern
     company_name: Theorem
     company_url: ''
     company_logo: ''
     date_start: 2026-03-01
     date_end: 2026-09-30
-    summary: ''
+    summary: Implemented an Elpi specification generator that uses univalent parametricity to derive equivalence obligations for Rocq-to-Lean translations.
   - position: Applied Scientist Intern
     company_name: Amazon Web Services
     company_url: ''
     company_logo: ''
     date_start: 2024-06-10
     date_end: 2024-08-30
-    summary: Applied Scientist Intern at ARI (Automated Reasoning in Identity) group.
+    summary: Returned to the Automated Reasoning in Identity (ARI) group to work on formal reasoning for AWS identity and access management.
   - position: Applied Scientist Intern
     company_name: Amazon Web Services
     company_url: ''
     company_logo: ''
     date_start: 2023-05-30
     date_end: 2023-09-01
-    summary: Applied Scientist Intern at ARI (Automated Reasoning in Identity) group.
+    summary: Worked on formal reasoning for AWS identity and access management in the ARI group.
   - position: Malware Analyst, Security Personnel
     company_name: ROK Army Headquarter (Obligatory Military Service)
     company_url: ''
     company_logo: ''
     date_start: 2018-08-30
     date_end: 2020-03-19
-    summary: ''
+    summary: Analyzed malware and supported information security during mandatory military service.
+
+teaching:
+  - position: TA for CS513, Numerical Linear Algebra
+    institution: University of Wisconsin-Madison
+    date: Spring 2022
+  - position: TA for CS240, Discrete Mathematics
+    institution: University of Wisconsin-Madison
+    date: Fall 2021
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
