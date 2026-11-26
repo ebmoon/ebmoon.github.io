@@ -11,5 +11,4 @@ publication_types: ["paper-conference"]
 publication: "Certified Programs and Proofs 2027"
 publication_short: "CPP 2027"
 featured: false
-url_pdf: "https://cseweb.ucsd.edu/~ldantoni/"
 ---
