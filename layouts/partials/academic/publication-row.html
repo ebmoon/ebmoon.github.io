@@ -42,14 +42,14 @@
           {{- if lt $index (len $notes) -}}
             {{- $note := index $notes $index -}}
             {{- range $marker, $text := $uniqueNotes -}}
-              {{- if eq $note $text }}<sup>{{ add $marker 1 }}</sup>{{ end -}}
+              {{- if eq $note $text }}<sup>{{ cond (eq $note "Equal contribution") "*" (string (add $marker 1)) }}</sup>{{ end -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}
       </p>
     {{ end }}
     {{ range $marker, $note := $uniqueNotes }}
-      <p class="academic-author-notes"><sup>{{ add $marker 1 }}</sup> {{ $note }}</p>
+      <p class="academic-author-notes"><sup>{{ cond (eq $note "Equal contribution") "*" (string (add $marker 1)) }}</sup> {{ $note }}</p>
     {{ end }}
     {{ $attachments := where $links "resolvedUrl" "ne" $primary }}
     {{ with $attachments }}

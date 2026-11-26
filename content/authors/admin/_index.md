@@ -142,7 +142,7 @@ languages:
 #       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
 ---
 
-I am a Research Engineer at [Harmonic](https://www.harmonic.fun/). I completed my PhD in Computer Science and Engineering at UC San Diego in September 2026, advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
+I am a Research Engineer at [Harmonic](https://www.harmonic.fun/). I completed my PhD in Computer Science and Engineering at UC San Diego in Sep 2026, advised by [Loris D'Antoni](https://cseweb.ucsd.edu/~ldantoni/).
 My research focuses on making AI more reliable and effective for formal verification.
 
 Outside of work, I enjoy playing acoustic guitar and training for marathons.

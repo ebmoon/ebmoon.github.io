@@ -10,7 +10,6 @@ sections:
       username: admin
     design:
       css_class: academic-home-section
-      date_format: 'January 2006'
   - block: education-list
     id: education
     content:
@@ -18,7 +17,6 @@ sections:
       username: admin
     design:
       css_class: academic-home-section
-      date_format: 'January 2006'
   - block: teaching-experience
     id: teaching
     content:

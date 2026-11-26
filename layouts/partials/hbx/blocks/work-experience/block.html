@@ -5,7 +5,7 @@
 {{ if not $person }}
   {{ errorf "Could not find work experience for %s." $author }}
 {{ end }}
-{{ $dateFormat := $block.design.date_format | default "January 2006" }}
+{{ $dateFormat := $block.design.date_format | default "Jan 2006" }}
 
 {{ with $person.Params.work }}
   <div class="academic-shell">

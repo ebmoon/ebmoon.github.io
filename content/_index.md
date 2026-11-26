@@ -15,7 +15,6 @@ sections:
       username: admin
     design:
       css_class: academic-home-section
-      date_format: 'January 2006'
   - block: academic-publications
     id: papers
     content:
@@ -30,7 +29,6 @@ sections:
       username: admin
     design:
       css_class: academic-home-section
-      date_format: 'January 2006'
   - block: teaching-experience
     id: teaching
     content:
